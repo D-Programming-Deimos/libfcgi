@@ -309,7 +309,7 @@ extern (C) {
             error occured
     ++/
     int FCGX_FPrintF(FCGX_Stream* stream, const char *format, ...);
-    int FCGX_VFPrintF(FCGX_Stream* stream, const char *format, va_list arg)/// ditto
+    int FCGX_VFPrintF(FCGX_Stream* stream, const char *format, va_list arg);/// ditto
 
     /++
         Flushes any buffered output.
