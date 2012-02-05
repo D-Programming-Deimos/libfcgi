@@ -1,6 +1,5 @@
 module deimos.fastcgi.fastcgi;
 
-import fastcgi.protocol;
 import core.stdc.string : memset;
 
 extern (System) {
@@ -141,23 +140,5 @@ static FCGI_Header MakeHeader( ubyte type, int requestId, int contentLength, int
     return header;
 }
 
-/*
- *----------------------------------------------------------------------
- *
- * MakeBeginRequestBody --
- *
- *      Constructs an FCGI_BeginRequestBody record.
- *
- *----------------------------------------------------------------------
- */
-static FCGI_BeginRequestBody MakeBeginRequestBody( ubyte role, ubyte keepConnection){
-    FCGI_BeginRequestBody requestBody;
-    assert( (role >> 16) == 0 );
-    requestBody.roleB1 = ((role >>  8) & 0xff);
-    requestBody.roleB0 = (role         & 0xff);
-    requestBody.flags  = ((keepConnection) ? Flag.KeepAlive : Flag.NoFlag);
-    memset( cast(void*) requestBody.reserved, 0, requestBody.reserved.sizeof );
-    return requestBody;
-}
 
 static int exitStatus = 0;

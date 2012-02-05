@@ -2,7 +2,7 @@ module deimos.fastcgi.fcgi_stdio;
 
 import std.c.stdarg;
 
-import fastcgi.c.fcgiapp;
+import deimos.fastcgi.fcgiapp;
 
 
 extern (System) {
