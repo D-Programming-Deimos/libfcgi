@@ -35,7 +35,7 @@ enum FcgiType : ubyte {
 }
 
 enum FcgiRequestFlags : ubyte {
-    KeepConn = 1;
+    KeepConn = 1
 }
 
 enum FcgiRequestRole : ubyte {
@@ -52,9 +52,9 @@ enum FcgiRequestStatus : ubyte {
 }
 
 enum FcgiValueName : char* {
-    MaxConns    = "FCGI_MAX_CONNS",
-    MaxReqs     = "FCGI_MAX_REQS",
-    MpxsConns   = "FCGI_MPXS_CONNS"
+    MaxConns    = cast(char*)"FCGI_MAX_CONNS".ptr,
+    MaxReqs     = cast(char*)"FCGI_MAX_REQS".ptr,
+    MpxsConns   = cast(char*)"FCGI_MPXS_CONNS".ptr
 }
 
 extern (C) {
@@ -103,7 +103,7 @@ extern (C) {
 
     struct FCGI_UnknownTypeRecord {
         FCGI_Header header;
-        FCGI_UnknownTypeBody body;
+        FCGI_UnknownTypeBody body_;
     }
 }
 
