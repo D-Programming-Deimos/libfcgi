@@ -1,0 +1,13 @@
+BUILD
+-----
+$ ldc2 -shared deimos/fastcgi/fastcgi.d  deimos/fastcgi/fcgiapp.d  deimos/fastcgi/fcgi_stdio.d
+
+Use make for easy build / install
+$ make DC=dmd LIBDIR=/usr/lib
+
+INSTALL
+-------
+su -c 'install libfcgi.so /usr/lib; ldconfig'
+
+Use make for easy build / install
+$ su -c" make install DC=dmd LIBDIR=/usr/lib"
