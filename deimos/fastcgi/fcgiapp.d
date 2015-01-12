@@ -4,6 +4,7 @@ import std.string;
 import std.c.stdarg;
 
 
+nothrow @nogc:
 extern (System) {
 
 /*
