@@ -82,6 +82,9 @@ struct FCGX_Request {
     int listen_sock;
 }
 
+
+nothrow @nogc:
+
 /*
  *======================================================================
  * Control
