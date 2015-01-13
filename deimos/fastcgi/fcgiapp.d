@@ -4,7 +4,6 @@ import std.string;
 import std.c.stdarg;
 
 
-nothrow @nogc:
 extern (System) {
 
 /*
@@ -82,6 +81,9 @@ struct FCGX_Request {
     int flags;
     int listen_sock;
 }
+
+
+nothrow @nogc:
 
 /*
  *======================================================================
