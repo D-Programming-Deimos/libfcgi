@@ -11,7 +11,7 @@
 **/
 module deimos.fcgi.fcgiapp;
 
-import std.c.stdarg : va_list;
+import core.stdc.stdarg : va_list;
 
 enum FastCGIError {
     UnsupportedVersion = -2,

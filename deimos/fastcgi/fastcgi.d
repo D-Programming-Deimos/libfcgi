@@ -58,7 +58,7 @@ struct FCGI_BeginRequestBody {
     ubyte roleB1;
     ubyte roleB0;
     ubyte flags;
-    ubyte reserved[5];
+    ubyte[5] reserved;
 }
 
 struct FCGI_BeginRequestRecord {
@@ -85,7 +85,7 @@ struct FCGI_EndRequestBody {
     ubyte appStatusB1;
     ubyte appStatusB0;
     ubyte protocolStatus;
-    ubyte reserved[3];
+    ubyte[3] reserved;
 }
 
 struct FCGI_EndRequestRecord {
@@ -112,7 +112,7 @@ const(string) FCGI_MPXS_CONNS = "FCGI_MPXS_CONNS";
 
 struct FCGI_UnknownTypeBody {
     ubyte type;
-    ubyte reserved[7];
+    ubyte[7] reserved;
 }
 
 struct FCGI_UnknownTypeRecord {
