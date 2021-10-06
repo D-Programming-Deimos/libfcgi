@@ -1,6 +1,6 @@
 module deimos.fastcgi.fcgi_stdio;
 
-import std.c.stdarg;
+import core.stdc.stdarg;
 
 import deimos.fastcgi.fcgiapp;
 
